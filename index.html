@@ -60,6 +60,27 @@ ul.mot{margin:0;padding:0;list-style:none;display:grid;gap:12px}
 ul.mot li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px}
 ul.mot li svg{width:22px;height:22px;margin-top:3px}
 .sign{margin-top:24px;font-family:Cinzel,serif;font-size:22px}
+.logobox{width:96px;height:96px;border-radius:50%;overflow:hidden;border:2px solid #e8b84a;background:#0006;margin-bottom:18px;position:relative}
+.logobox img{width:100%;height:100%;object-fit:cover;display:block}
+.miss{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;color:#e8dcc8;border:2px dashed #ffffff55;border-radius:inherit;padding:8px;background:#0005}
+.gi{margin:0;position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--bg)}
+.gi .miss{color:var(--mut);border-color:var(--line);background:none}
+.portrait{margin:0 0 22px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,#2a0a0d,#0e0405);aspect-ratio:4/3;position:relative}
+.portrait>img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait .ph{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:16px}
+.portrait .ph svg{height:80%;width:auto}
+.portrait .ph span{color:#e8dcc8;font-size:13px}.portrait .ph code{background:#ffffff18;color:#fff}
+.portrait.empty .ph{display:flex}
+.sub{font-size:22px;margin:0 0 12px}
+.road{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;counter-reset:r}
+.road>li{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:26px 22px 20px;position:relative}
+.road>li::before{counter-increment:r;content:counter(r);position:absolute;top:-17px;left:20px;width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;font:700 16px/34px Cinzel,serif;text-align:center;box-shadow:0 0 0 4px var(--bg2)}
+.road b{display:block;font-family:Cinzel,serif;font-size:21px;margin:0 0 10px;color:var(--gold)}
+.road ul{margin:0;padding-left:18px;display:grid;gap:8px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.usr.gone{display:none}
+@media(max-width:820px){.road{grid-template-columns:minmax(0,1fr);gap:28px}}
 footer{border-top:1px solid var(--line);color:var(--mut);font-size:14px;text-align:center}
 .alt{background:var(--bg2)}
 @media(max-width:820px){.hero .wrap,.grid2{grid-template-columns:minmax(0,1fr)}.emb{max-width:360px;order:-1}.hero .wrap{min-height:0}}
@@ -71,6 +92,7 @@ footer{border-top:1px solid var(--line);color:var(--mut);font-size:14px;text-ali
 
 <header class="hero band"><div class="wrap">
  <div>
+  <div class="logobox"><img class="usr" src="logo-zeus.png" alt="Logo de l'équipe Zeus" data-f="logo-zeus.png"></div>
   <span class="tag"><svg><use href="#bolt"/></svg>Candidature · Équipe Zeus · Serveur Raiden</span>
   <h1>Valian</h1>
   <div class="alias">« Cerbère »</div>
@@ -125,7 +147,6 @@ footer{border-top:1px solid var(--line);color:var(--mut);font-size:14px;text-ali
    <dt>Rôle</dt><dd>Coach</dd>
    <dt>Établissement</dt><dd>Institut Zeus</dd>
    <dt>Caractère</dt><dd>Exigeant, calculateur, protecteur</dd>
-   <dt>Signe distinctif</dt><dd>Long manteau sombre, regard qui ne cligne jamais</dd>
   </dl>
  </div>
 </div></section>
@@ -134,6 +155,26 @@ footer{border-top:1px solid var(--line);color:var(--mut);font-size:14px;text-ali
  <h2><small>Histoire du personnage</small>Le gardien des portes</h2>
  <p>Personne à l'Institut Zeus ne connaît vraiment le passé de Valian. On raconte qu'il a grandi au bord du terrain, à regarder les matchs depuis les grillages, à noter dans des carnets usés chaque déplacement, chaque erreur, chaque faiblesse. Là où les autres voyaient un match, lui voyait déjà un plan.</p><p>Issu d'un quartier où le football de rue était la seule échappatoire, Valian n'a jamais eu le talent physique des grands joueurs. Trop lent, trop frêle, il était toujours le dernier choisi. Plutôt que d'abandonner, il a décidé de gagner autrement : avec sa tête. Il s'est mis à étudier les équipes, à dessiner des schémas sur des bouts de papier, à prédire les actions avant qu'elles n'arrivent.</p><p>Un jour, une petite équipe de quartier sur le point d'être reléguée l'a laissé diriger un match par défi. Avec des joueurs moyens et un plan implacable, elle a battu le favori du tournoi. Ce soir-là, Valian a compris que sa place n'était pas sur le terrain, mais au bord, là où l'on décide de tout.</p><p>On l'a surnommé Cerbère quand il a commencé à diriger des entraînements officieux : trois exercices en même temps, trois groupes surveillés d'un seul regard, et pas un joueur qui puisse relâcher son effort sans qu'il le remarque. Comme le chien des Enfers, il garde les portes. Rien n'entre, rien ne sort sans sa permission.</p><p>Son arrivée dans l'entourage de l'Institut Zeus n'est pas due au hasard. Ses carnets, remplis d'analyses sur des dizaines d'équipes, ont fini par circuler jusqu'aux couloirs de l'établissement. Certains le trouvent inquiétant, d'autres le considèrent comme un génie. Lui ne cherche ni l'un ni l'autre : il veut seulement une équipe à la hauteur de ses plans.</p><p>Ses méthodes sont dures. Il impose des entraînements à l'aube, sanctionne le moindre relâchement et ne félicite presque jamais. Mais ceux qui ont joué sous ses ordres le savent : quand Cerbère hoche la tête après un match, c'est qu'ils ont été parfaits.</p><p>Derrière la dureté, Cerbère protège farouchement les siens. Il pousse ses joueurs au bout d'eux-mêmes parce qu'il croit qu'ils méritent d'être des dieux sur le terrain, et il sera le premier à se dresser devant quiconque s'en prend à son équipe.</p>
  <p class="quote">« Un dieu ne doute pas. Il frappe, et le monde s'adapte. »</p>
+</div></section>
+
+<section class="band"><div class="wrap grid2">
+ <div class="card">
+  <h2><small>Caractéristiques</small>Apparence</h2>
+  <dl><dt>Âge apparent</dt><dd>Jeune adulte, plus mûr que son âge</dd><dt>Taille</dt><dd>1,82 m, silhouette sèche et droite</dd><dt>Cheveux</dt><dd>Noirs, mi-longs, attachés en catogan bas</dd><dt>Yeux</dt><dd>Gris acier, cernés par les nuits d'analyse</dd><dt>Tenue</dt><dd>Long manteau sombre aux liserés rouges, chemise noire, carnet toujours à la main</dd><dt>Voix</dt><dd>Grave et posée, ne crie jamais</dd><dt>Signe distinctif</dt><dd>Une fine cicatrice au sourcil gauche</dd></dl>
+ </div>
+ <div class="card">
+  <h2><small>Caractère</small>Personnalité</h2>
+  <ul class="mot"><li><svg viewBox="0 0 24 24" style="color:var(--gold)"><use href="#bolt"/></svg><span>Perfectionniste et calculateur, il anticipe tout.</span></li><li><svg viewBox="0 0 24 24" style="color:var(--gold)"><use href="#bolt"/></svg><span>Protecteur envers son équipe, impitoyable envers ses adversaires.</span></li><li><svg viewBox="0 0 24 24" style="color:var(--gold)"><use href="#bolt"/></svg><span>Avare de compliments, mais chacun compte double.</span></li><li><svg viewBox="0 0 24 24" style="color:var(--gold)"><use href="#bolt"/></svg><span>Point faible : il supporte mal l'imprévu.</span></li></ul>
+ </div>
+</div></section>
+
+<section class="band alt"><div class="wrap">
+ <h2><small>Feuille de route</small>Objectifs</h2>
+ <ol class="road">
+  <li><b>Court terme</b><ul><li>Prendre ses marques avec l'équipe Zeus et évaluer chaque joueur.</li><li>Mettre en place des entraînements réguliers.</li><li>Imposer une discipline et un schéma de jeu clairs.</li></ul></li>
+  <li><b>Moyen terme</b><ul><li>Construire une identité de jeu propre à Zeus.</li><li>Remporter les premiers matchs officiels.</li><li>Faire progresser chaque joueur vers son meilleur niveau.</li></ul></li>
+  <li><b>Long terme</b><ul><li>Faire de Zeus l'équipe la plus redoutée du serveur Raiden.</li><li>Remporter un tournoi majeur.</li><li>Laisser une méthode et un héritage qui survivront à son passage.</li></ul></li>
+ </ol>
 </div></section>
 
 <section class="band"><div class="wrap grid2">
@@ -172,6 +213,8 @@ footer{border-top:1px solid var(--line);color:var(--mut);font-size:14px;text-ali
 
 <footer class="band">Candidature individuelle de James pour l'équipe Zeus · Serveur RP Raiden</footer>
 <script>{
+const fix=i=>{const bad=()=>{i.classList.add('gone');const p=i.closest('.portrait');if(p){p.classList.add('empty');return}const m=document.createElement('div');m.className='miss';m.textContent='Image à ajouter : '+i.dataset.f;i.parentNode.appendChild(m)};if(i.complete){if(!i.naturalWidth)bad()}else i.addEventListener('error',bad)};
+document.querySelectorAll('img.usr').forEach(fix);
 for(const b of document.querySelectorAll('.cp')){b.addEventListener('click',async()=>{const t=document.getElementById(b.dataset.c).textContent;try{await navigator.clipboard.writeText(t);b.textContent='Copié ✓'}catch(e){b.textContent='Sélectionnez'}setTimeout(()=>{b.textContent='Copier'},1600)})}
 }</script>
 </body></html>
